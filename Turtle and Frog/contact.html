@@ -21,6 +21,9 @@
     </head> 
     
     <body>
+        <noscript> 
+            <p>JavaScript is disabled. This site is best viewed with JavaScript enabled.</p>
+        </noscript>
         <header class="jumbotron">
             <h4>Exciting News! We're opening a new location! Stay tuned for more details!</h4>
         </header>
@@ -57,18 +60,18 @@
 
         </nav>
 
-            <form id="form">
+            <form id="form" name="myForm" onsubmit="return validateForm()" method="post">
                 <div class="form-group row">
                     <label for="yourName" class="col-sm-4 col-form-label"><b>Name:</b></label>
                     <input type="text" class="col-sm-4" id="name" name="enterName" /><br> 
                 </div>
                 <div class="form-group row">
                     <label for="yourEmail" class="col-sm-4 col-form-label"><b>Email:</b></label>
-                    <input type="text" class="col-sm-4" id="email" name="YourEmail" /><br>
+                    <input type="text" class="col-sm-4" id="email" name="yourEmail" /><br>
                 </div>
                 <div class="form-group row">
                     <label for="yourPhone" class="col-sm-4 col-form-label"><b>Phone:</b></label>
-                    <input type="text" class="col-sm-4" id="phone" name="YourPhone" /><br>
+                    <input type="text" class="col-sm-4" id="phone" name="yourPhone" /><br>
                 </div>
                 <div class="form-group row">
                     <label for="reasons" class="col-sm-4 col-form-label"><b>Reason for Inquiry:</b></label>

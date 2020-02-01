@@ -24,3 +24,27 @@ function showSlides(n) {
   slides[slideIndex-1].style.display = "block"; 
   dots[slideIndex-1].className += " active";
 }
+
+function validateForm() {
+  if( document.myForm.enterName.value == "") {
+    alert("Please provide your name.");
+    document.myForm.enterName.focus();
+    return false;
+  }
+
+  if(document.myForm.yourEmail.value == "") {
+    alert("Please provide your email.");
+    document.myForm.yourEmail.focus();
+    return false;
+  }
+
+  if(document.myForm.yourPhone.value == "") {
+    alert("Please provide your phone number.");
+    document.myForm.yourPhone.focus();
+    return false;
+  }
+
+  return true;
+  
+}
+
