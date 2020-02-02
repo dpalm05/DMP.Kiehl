@@ -1,0 +1,174 @@
+<!DOCTYPE html> 
+<!--
+    Name: Your Name 
+    Date Created: Today's date 
+    Most recent revision:
+-->
+<html lang="en"> 
+    <head> 
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <title>Menu</title>
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <link href="restaurantStyles.css" rel="stylesheet" type="text/css" />	
+        <script type="text/javascript" src="site.js"></script>
+        <style>
+            #menu {
+                background-color: #ADD8E6;
+                padding: 20px 5px 20px 10px;
+                font-style: italic;
+            }
+            table, th, td {
+                border: 1px solid black;
+                text-align: center;
+            }  
+
+        </style>
+    </head> 
+    
+    <body>
+        <noscript> 
+            <p>JavaScript is disabled. This site is best viewed with JavaScript enabled.</p>
+        </noscript>
+        <header>
+            <div class="jumbotron">
+                <h4>Exciting News! We're opening a new location! Stay tuned for more details!</h4>
+            </div>
+            <h1>Turtle and Frog</h1>
+        </header>
+         <div class="slideshow-container">
+
+
+            <div class="mySlides">
+                <div class="numberText1"></div>
+                <p><em><i>We're opening a new location!</i></em></p>
+            </div>
+
+            <div class="mySlides">
+                <div class= "numberText2"></div>
+                <p><em><i>We're rolling out our seasonal menu, with special options for the season.</i></em></p>
+            </div>
+
+            <div class="mySlides">
+                <div class= "numberText3"></div>
+                <p><em><i>The Drink of the Month is SG Special Brew.</i></em></p>
+            </div>
+
+            <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+            <a class="next" onclick="plusSlides(1)">&#10095;</a>
+        </div>
+        <div style="text-align:center">
+            <span class="dot"></span>
+            <span class="dot"></span>
+            <span class="dot"></span>
+        </div>
+        <script>
+            var slideIndex = 0;
+            showSlides();
+
+            function showSlides() {
+            var i;
+            var slides = document.getElementsByClassName("mySlides");
+            var dots = document.getElementsByClassName("dot");
+            for (i = 0; i < slides.length; i++) {
+                slides[i].style.display = "none";
+            }
+            slideIndex++;
+            if(slideIndex > slides.length) { slideIndex = 1}
+                for (i = 0; i < dots.length; i++) {
+                    dots[i].className = dots[i].className.replace("active", "");
+                }
+            slides[slideIndex-1].style.display = "block";
+            dots[slideIndex-1].className += " active";
+            setTimeout(showSlides, 5000);
+    
+            }
+        </script>
+
+      <nav>
+            <div class="topnav">
+            <hr />
+            <a class="btn" href="index.html"><i class="fa fa-home"></i> Home</a>
+            <p><a class="btn" href="menu.html">Menu</a></p>
+            <p><a class="btn" href="contact.html">Contact Us</a></p>
+            </div>
+
+        </nav>
+
+        <section id="menu">
+            <div class="row">
+                <div class="col-lg-4">
+                    <p style="font-size: 14pt;"><b>Burger and Fries</b></p>
+                    <p><i>An American Classic!</i><br>
+                    Your choice - with or without cheese - Pickle, onion, tomato, and lettue. Served with our famous thick cut french fries.<br><b>$7.95</b></p>
+                </div>
+                <div class="col-lg-4">
+                    <p style="font-size: 14pt;"><b>Hot Dog and Chips</b></p>
+                    <p><i>A Summer Classic!</i><br>
+                    Your choice - white or wheat bun - relish, mustard, and ketchup. Served with our house-made chips.<br><b>$7.95</b></p>
+                </div>
+                <div class="col-lg-4">
+                    <p style="font-size: 14pt;"><b>Italian Sausage and Peppers</b></p>
+                    <p><i>An All-Time Favorite!</i><br>
+                    Your choice - mild or spicy Cole Slaw - Served with garlic mashers.<br><b>$10.95</b></p>
+                </div>
+                <div class="col-lg-4">
+                    <p style="font-size: 14pt;"><b>Tenderloin Sandwich and Chips</b></p>
+                    <p><i>Really Hits the Spot!</i><br>
+                    Plain or Sesame Seed Bun, Pickle, onion, tomato, and lettuce. Served with our house-made chips.<br><b>$8.95</b></p>
+                </div>
+                <div class="col-lg-4">
+                    <p style="font-size: 14pt;"><b>House Salad</b></p>
+                    <p><i>On the Lighter Side!</i><br>
+                    Your choice - with or without cheese - iceberg lettuce, tomatoes, peppers, Thousand Island or Ranch Dressing. Served with a dinner roll<br><b>$6.95</b></p>
+                </div>
+                <div class="col-lg-4">
+                    <p style="font-size: 14pt;"><b>Brisket Sandwich and Fries</b></p>
+                    <p><i>A Taste of Texas!</i><br>
+                    Smoked Brisket on thick-cut Texas Toast. Served with our famous thick-cut french fries<br><b>$7.95</b></p>
+                </div>
+            </div>
+
+        <table id="beverages" border="2" width="90%" align="center">
+            <thead>
+                <tr>
+                    <th colspan="2">Beverages</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Root Beer</td>
+                    <td>$3.00</td>
+                </tr>
+                <tr>
+                    <td>Bottled Water</td>
+                    <td>$1.25</td>
+                </tr>
+                <tr>
+                    <td>Lemonade</td>
+                    <td>$1.00</td>
+                </tr>
+                <tr>
+                    <td>Iced Tea</td>
+                    <td>$1.25</td>
+                </tr>
+            </tbody>
+        </table>
+
+
+        </section>
+
+
+
+        <footer>
+            
+            <p>1234 Wetland Way, New London, NH 03257</p>
+            <p>1-345-654-1234</p>
+
+        </footer>
+        <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+    </body> 
+</html

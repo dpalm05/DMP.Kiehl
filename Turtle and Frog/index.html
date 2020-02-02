@@ -1,0 +1,116 @@
+<!DOCTYPE html> 
+<!--
+    Name: Dana Kiehl 
+    Date Created: 1/26/2020
+    Most recent revision:
+-->
+<html lang="en"> 
+    <head> 
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <title>Turtle and Frog</title>	
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <link href="restaurantStyles.css" rel="stylesheet" type="text/css" />
+        <script type="text/javascript" src="site.js"></script>
+        <style>
+            .mySlides {display: none;}
+        </style>
+
+    </head> 
+    
+    <body>
+        <noscript> 
+            <p>JavaScript is disabled. This site is best viewed with JavaScript enabled.</p>
+        </noscript>
+
+        
+        <header>
+            <div class="jumbotron">
+                <h4>Exciting News! We're opening a new location! Stay tuned for more details!</h4>
+            </div>
+
+            <h1>Turtle and Frog</h1>
+        </header>
+        <div class="slideshow-container">
+
+
+            <div class="mySlides">
+                <div class="numberText1"></div>
+                <p><em><i>We're opening a new location!</i></em></p>
+            </div>
+
+            <div class="mySlides">
+                <div class= "numberText2"></div>
+                <p><em><i>We're rolling out our seasonal menu, with special options for the season.</i></em></p>
+            </div>
+
+            <div class="mySlides">
+                <div class= "numberText3"></div>
+                <p><em><i>The Drink of the Month is SG Special Brew.</i></em></p>
+            </div>
+
+            <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+            <a class="next" onclick="plusSlides(1)">&#10095;</a>
+        </div>
+        <div style="text-align:center">
+            <span class="dot"></span>
+            <span class="dot"></span>
+            <span class="dot"></span>
+        </div>
+        
+        <script>
+            var slideIndex = 0;
+            showSlides();
+
+            function showSlides() {
+            var i;
+            var slides = document.getElementsByClassName("mySlides");
+            var dots = document.getElementsByClassName("dot");
+            for (i = 0; i < slides.length; i++) {
+                slides[i].style.display = "none";
+            }
+            slideIndex++;
+            if(slideIndex > slides.length) { slideIndex = 1}
+                for (i = 0; i < dots.length; i++) {
+                    dots[i].className = dots[i].className.replace("active", "");
+                }
+            slides[slideIndex-1].style.display = "block";
+            dots[slideIndex-1].className += " active";
+            setTimeout(showSlides, 5000);
+    
+            }
+        </script>
+
+        <nav>
+            <div class="topnav">
+            <hr />
+            <a class="btn" href="index.html"><i class="fa fa-home"></i> Home</a>
+            <p><a class="btn" href="menu.html">Menu</a></p>
+            <p><a class="btn" href="contact.html">Contact Us</a></p>
+            </div>
+         
+
+        </nav>
+        <section id="about">
+            <article id="photo">
+
+                <p style="text-align: center;"><img src="Images/hotdog.jpg" width=600px; alt="Photo of a Meal" />
+
+                <h2>All Your Favorites, All the Time!</h2>
+            </article>
+            <article id="description">
+                <p>Welcome to Turtle and Frog, the restaurant with all your favorites. Our wonderful chef works everyday to create delicious meals for all of our customers to enjoy. Join us on weeknights for our daily specials as well as special events. Tuesdays come test your knowledge with Trivia Night. $500 prize for the winning team! Fridays we welcome a new band each week for live music. Come join us for evenings of delicious food and activites abound.</p>
+            </article>
+        </section>
+        <footer>
+            
+            <p>1234 Wetland Way, New London, NH 03257</p>
+            <p>1-345-654-1234</p>
+
+        </footer>
+        <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+    </body> 
+</html
