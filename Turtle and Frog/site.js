@@ -1,3 +1,4 @@
+
 var slideIndex = 1;
 showSlides(slideIndex);
 
@@ -24,7 +25,6 @@ function showSlides(n) {
   slides[slideIndex-1].style.display = "block"; 
   dots[slideIndex-1].className += " active";
 }
-
 function validateForm() {
   if( document.myForm.enterName.value == "") {
     alert("Please provide your name.");
@@ -47,4 +47,5 @@ function validateForm() {
   return true;
   
 }
+
 

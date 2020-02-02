@@ -13,6 +13,9 @@
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
         <link href="restaurantStyles.css" rel="stylesheet" type="text/css" />
         <script type="text/javascript" src="site.js"></script>
+        <style>
+            .mySlides {display: none;}
+        </style>
 
     </head> 
     
@@ -20,30 +23,64 @@
         <noscript> 
             <p>JavaScript is disabled. This site is best viewed with JavaScript enabled.</p>
         </noscript>
-        <header class="jumbotron">
-            <h4>Exciting News! We're opening a new location! Stay tuned for more details!</h4>
-        </header>
+
+        
         <header>
+            <div class="jumbotron">
+                <h4>Exciting News! We're opening a new location! Stay tuned for more details!</h4>
+            </div>
+
             <h1>Turtle and Frog</h1>
         </header>
         <div class="slideshow-container">
 
 
             <div class="mySlides">
-                <p>We're opening a new location!</p>
+                <div class="numberText1"></div>
+                <p><em><i>We're opening a new location!</i></em></p>
             </div>
 
             <div class="mySlides">
-                <p>We're rolling out our seasonal menu, with special options for the season.</p>
+                <div class= "numberText2"></div>
+                <p><em><i>We're rolling out our seasonal menu, with special options for the season.</i></em></p>
             </div>
 
             <div class="mySlides">
-                <p>The Drink of the Month is SG Special Brew.
+                <div class= "numberText3"></div>
+                <p><em><i>The Drink of the Month is SG Special Brew.</i></em></p>
             </div>
 
             <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
             <a class="next" onclick="plusSlides(1)">&#10095;</a>
         </div>
+        <div style="text-align:center">
+            <span class="dot"></span>
+            <span class="dot"></span>
+            <span class="dot"></span>
+        </div>
+        
+        <script>
+            var slideIndex = 0;
+            showSlides();
+
+            function showSlides() {
+            var i;
+            var slides = document.getElementsByClassName("mySlides");
+            var dots = document.getElementsByClassName("dot");
+            for (i = 0; i < slides.length; i++) {
+                slides[i].style.display = "none";
+            }
+            slideIndex++;
+            if(slideIndex > slides.length) { slideIndex = 1}
+                for (i = 0; i < dots.length; i++) {
+                    dots[i].className = dots[i].className.replace("active", "");
+                }
+            slides[slideIndex-1].style.display = "block";
+            dots[slideIndex-1].className += " active";
+            setTimeout(showSlides, 5000);
+    
+            }
+        </script>
 
         <nav>
             <div class="topnav">
@@ -58,7 +95,7 @@
         <section id="about">
             <article id="photo">
 
-                <p style="text-align: center;"><img src="Images/hotdog.jpg" width=400px; alt="Photo of a Meal" />
+                <p style="text-align: center;"><img src="Images/hotdog.jpg" width=600px; alt="Photo of a Meal" />
 
                 <h2>All Your Favorites, All the Time!</h2>
             </article>

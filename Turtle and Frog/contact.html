@@ -17,6 +17,10 @@
             form {
                 text-align: center;
             }
+            #form {
+                padding: 20px 5px 20px 10px;
+                background-color: #ADD8E6;
+            }
         </style>
     </head> 
     
@@ -24,30 +28,61 @@
         <noscript> 
             <p>JavaScript is disabled. This site is best viewed with JavaScript enabled.</p>
         </noscript>
-        <header class="jumbotron">
-            <h4>Exciting News! We're opening a new location! Stay tuned for more details!</h4>
-        </header>
+        
         <header>
+            <div class="jumbotron">
+                <h4>Exciting News! We're opening a new location! Stay tuned for more details!</h4>
+            </div>
             <h1>Turtle and Frog</h1>
         </header>
-        <div class="slideshow-container">
+         <div class="slideshow-container">
 
 
             <div class="mySlides">
-                <p>We're opening a new location!</p>
+                <div class="numberText1"></div>
+                <p><em><i>We're opening a new location!</i></em></p>
             </div>
 
             <div class="mySlides">
-                <p>We're rolling out our seasonal menu, with special options for the season.</p>
+                <div class= "numberText2"></div>
+                <p><em><i>We're rolling out our seasonal menu, with special options for the season.</i></em></p>
             </div>
 
             <div class="mySlides">
-                <p>The Drink of the Month is SG Special Brew.
+                <div class= "numberText3"></div>
+                <p><em><i>The Drink of the Month is SG Special Brew.</i></em></p>
             </div>
 
             <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
             <a class="next" onclick="plusSlides(1)">&#10095;</a>
         </div>
+        <div style="text-align:center">
+            <span class="dot"></span>
+            <span class="dot"></span>
+            <span class="dot"></span>
+        </div>
+        <script>
+            var slideIndex = 0;
+            showSlides();
+
+            function showSlides() {
+            var i;
+            var slides = document.getElementsByClassName("mySlides");
+            var dots = document.getElementsByClassName("dot");
+            for (i = 0; i < slides.length; i++) {
+                slides[i].style.display = "none";
+            }
+            slideIndex++;
+            if(slideIndex > slides.length) { slideIndex = 1}
+                for (i = 0; i < dots.length; i++) {
+                    dots[i].className = dots[i].className.replace("active", "");
+                }
+            slides[slideIndex-1].style.display = "block";
+            dots[slideIndex-1].className += " active";
+            setTimeout(showSlides, 5000);
+    
+            }
+        </script>
 
         <nav>
             <div class="topnav">
@@ -74,7 +109,7 @@
                     <input type="text" class="col-sm-4" id="phone" name="yourPhone" /><br>
                 </div>
                 <div class="form-group row">
-                    <label for="reasons" class="col-sm-4 col-form-label"><b>Reason for Inquiry:</b></label>
+                    <label for="reasons" class="col-sm-4 col-form-label">Reason for Inquiry:</label>
                     <select name="reasons">
                         <option value="Catering">Catering</option>
                         <option value="Private Party">Private Party</option>

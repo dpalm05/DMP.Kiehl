@@ -13,33 +13,78 @@
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
         <link href="restaurantStyles.css" rel="stylesheet" type="text/css" />	
         <script type="text/javascript" src="site.js"></script>
+        <style>
+            #menu {
+                background-color: #ADD8E6;
+                padding: 20px 5px 20px 10px;
+                font-style: italic;
+            }
+            table, th, td {
+                border: 1px solid black;
+                text-align: center;
+            }  
+
+        </style>
     </head> 
     
     <body>
-        <header class="jumbotron">
-            <h4>Exciting News! We're opening a new location! Stay tuned for more details!</h4>
-        </header>
+        <noscript> 
+            <p>JavaScript is disabled. This site is best viewed with JavaScript enabled.</p>
+        </noscript>
         <header>
+            <div class="jumbotron">
+                <h4>Exciting News! We're opening a new location! Stay tuned for more details!</h4>
+            </div>
             <h1>Turtle and Frog</h1>
         </header>
-        <div class="slideshow-container">
+         <div class="slideshow-container">
 
 
             <div class="mySlides">
-                <p>We're opening a new location!</p>
+                <div class="numberText1"></div>
+                <p><em><i>We're opening a new location!</i></em></p>
             </div>
 
             <div class="mySlides">
-                <p>We're rolling out our seasonal menu, with special options for the season.</p>
+                <div class= "numberText2"></div>
+                <p><em><i>We're rolling out our seasonal menu, with special options for the season.</i></em></p>
             </div>
 
             <div class="mySlides">
-                <p>The Drink of the Month is SG Special Brew.
+                <div class= "numberText3"></div>
+                <p><em><i>The Drink of the Month is SG Special Brew.</i></em></p>
             </div>
 
             <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
             <a class="next" onclick="plusSlides(1)">&#10095;</a>
         </div>
+        <div style="text-align:center">
+            <span class="dot"></span>
+            <span class="dot"></span>
+            <span class="dot"></span>
+        </div>
+        <script>
+            var slideIndex = 0;
+            showSlides();
+
+            function showSlides() {
+            var i;
+            var slides = document.getElementsByClassName("mySlides");
+            var dots = document.getElementsByClassName("dot");
+            for (i = 0; i < slides.length; i++) {
+                slides[i].style.display = "none";
+            }
+            slideIndex++;
+            if(slideIndex > slides.length) { slideIndex = 1}
+                for (i = 0; i < dots.length; i++) {
+                    dots[i].className = dots[i].className.replace("active", "");
+                }
+            slides[slideIndex-1].style.display = "block";
+            dots[slideIndex-1].className += " active";
+            setTimeout(showSlides, 5000);
+    
+            }
+        </script>
 
       <nav>
             <div class="topnav">
@@ -54,34 +99,34 @@
         <section id="menu">
             <div class="row">
                 <div class="col-lg-4">
-                    <p><b>Burger and Fries</b><br>
-                    <i>An American Classic!</i><br>
-                    Your choice - with or without cheese - Pickle, onion, tomato, and lettue. Served with our famous thick cut french fries.<br>$7.95</p>
+                    <p style="font-size: 14pt;"><b>Burger and Fries</b></p>
+                    <p><i>An American Classic!</i><br>
+                    Your choice - with or without cheese - Pickle, onion, tomato, and lettue. Served with our famous thick cut french fries.<br><b>$7.95</b></p>
                 </div>
                 <div class="col-lg-4">
-                    <p><b>Hot Dog and Chips</b><br>
-                    <i>A Summer Classic!</i><br>
-                    Your choice - white or wheat bun - relish, mustard, and ketchup. Served with our house-made chips.<br>$7.95</p>
+                    <p style="font-size: 14pt;"><b>Hot Dog and Chips</b></p>
+                    <p><i>A Summer Classic!</i><br>
+                    Your choice - white or wheat bun - relish, mustard, and ketchup. Served with our house-made chips.<br><b>$7.95</b></p>
                 </div>
                 <div class="col-lg-4">
-                    <p><b>Italian Sausage and Peppers</b><br>
-                    <i>An All-Time Favorite!</i><br>
-                    Your choice - mild or spicy Cole Slaw - Served with garlic mashers.<br>$10.95</p>
+                    <p style="font-size: 14pt;"><b>Italian Sausage and Peppers</b></p>
+                    <p><i>An All-Time Favorite!</i><br>
+                    Your choice - mild or spicy Cole Slaw - Served with garlic mashers.<br><b>$10.95</b></p>
                 </div>
                 <div class="col-lg-4">
-                    <p><b>Tenderloin Sandwich and Chips</b><br>
-                    <i>Really Hits the Spot!</i><br>
-                    Plain or Sesame Seed Bun, Pickle, onion, tomato, and lettuce. Served with our house-made chips.<br>$8.95</p>
+                    <p style="font-size: 14pt;"><b>Tenderloin Sandwich and Chips</b></p>
+                    <p><i>Really Hits the Spot!</i><br>
+                    Plain or Sesame Seed Bun, Pickle, onion, tomato, and lettuce. Served with our house-made chips.<br><b>$8.95</b></p>
                 </div>
                 <div class="col-lg-4">
-                    <p><b>House Salad</b><br>
-                    <i>On the Lighter Side!</i><br>
-                    Your choice - with or without cheese - iceberg lettuce, tomatoes, peppers, Thousand Island or Ranch Dressing. Served with a dinner roll<br>$6.95</p>
+                    <p style="font-size: 14pt;"><b>House Salad</b></p>
+                    <p><i>On the Lighter Side!</i><br>
+                    Your choice - with or without cheese - iceberg lettuce, tomatoes, peppers, Thousand Island or Ranch Dressing. Served with a dinner roll<br><b>$6.95</b></p>
                 </div>
                 <div class="col-lg-4">
-                    <p><b>Brisket Sandwich and Fries</b><br>
-                    <i>A Taste of Texas!</i><br>
-                    Smoked Brisket on thick-cut Texas Toast. Served with our famous thick-cut french fries<br>$7.95</p>
+                    <p style="font-size: 14pt;"><b>Brisket Sandwich and Fries</b></p>
+                    <p><i>A Taste of Texas!</i><br>
+                    Smoked Brisket on thick-cut Texas Toast. Served with our famous thick-cut french fries<br><b>$7.95</b></p>
                 </div>
             </div>
 
