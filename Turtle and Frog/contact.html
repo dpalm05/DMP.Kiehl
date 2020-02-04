@@ -1,0 +1,181 @@
+<!DOCTYPE html> 
+<!--
+    Name: Your Name 
+    Date Created: Today's date 
+    Most recent revision:
+-->
+<html lang="en"> 
+    <head> 
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <title>Contact Us</title>	
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <link href="restaurantStyles.css" rel="stylesheet" type="text/css" />
+        <script type="text/javascript" src="site.js"></script>
+        <style>
+            form {
+                text-align: center;
+            }
+            #form {
+                padding: 20px 5px 20px 10px;
+                background-color: #ADD8E6;
+            }
+            label {
+                text-align: right;
+            }
+        </style>
+    </head> 
+    
+    <body>
+        <noscript> 
+            <p>JavaScript is disabled. This site is best viewed with JavaScript enabled.</p>
+        </noscript>
+        
+        <header>
+            <div class="jumbotron">
+                <h4>Exciting News! We're opening a new location! Stay tuned for more details!</h4>
+            </div>
+            <h1>Turtle and Frog</h1>
+        </header>
+         <div class="slideshow-container">
+
+
+            <div class="mySlides">
+                <div class="numberText1"></div>
+                <p><em><i>We're opening a new location!</i></em></p>
+            </div>
+
+            <div class="mySlides">
+                <div class= "numberText2"></div>
+                <p><em><i>We're rolling out our seasonal menu, with special options for the season.</i></em></p>
+            </div>
+
+            <div class="mySlides">
+                <div class= "numberText3"></div>
+                <p><em><i>The Drink of the Month is SG Special Brew.</i></em></p>
+            </div>
+
+            <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+            <a class="next" onclick="plusSlides(1)">&#10095;</a>
+        </div>
+        <div style="text-align:center">
+            <span class="dot"></span>
+            <span class="dot"></span>
+            <span class="dot"></span>
+        </div>
+        <script>
+            var slideIndex = 0;
+            showSlides();
+
+            function showSlides() {
+            var i;
+            var slides = document.getElementsByClassName("mySlides");
+            var dots = document.getElementsByClassName("dot");
+            for (i = 0; i < slides.length; i++) {
+                slides[i].style.display = "none";
+            }
+            slideIndex++;
+            if(slideIndex > slides.length) { slideIndex = 1}
+                for (i = 0; i < dots.length; i++) {
+                    dots[i].className = dots[i].className.replace("active", "");
+                }
+            slides[slideIndex-1].style.display = "block";
+            dots[slideIndex-1].className += " active";
+            setTimeout(showSlides, 5000);
+    
+            }
+        </script>
+
+        <nav>
+            <div class="topnav">
+            <hr />
+            <a class="btn" href="index.html"><i class="fa fa-home"></i> Home</a>
+            <p><a class="btn" href="menu.html">Menu</a></p>
+            <p><a class="btn" href="contact.html">Contact Us</a></p>
+            </div>
+
+
+        </nav>
+
+            <form id="form" name="myForm" onsubmit="return validateForm()" method="post">
+                <div class="form-group row">
+                    <label for="yourName" class="col-sm-4 col-form-label"><b>Name:</b></label>
+                    <input type="text" class="col-sm-4" id="name" name="enterName" /><br> 
+                </div>
+                <div class="form-group row">
+                    <label for="yourEmail" class="col-sm-4 col-form-label"><b>Email:</b></label>
+                    <input type="text" class="col-sm-4" id="email" name="yourEmail" /><br>
+                </div>
+                <div class="form-group row">
+                    <label for="yourPhone" class="col-sm-4 col-form-label"><b>Phone:</b></label>
+                    <input type="text" class="col-sm-4" id="phone" name="yourPhone" /><br>
+                </div>
+                <div class="form-group row">
+                    <label for="reasons" class="col-sm-4 col-form-label">Reason for Inquiry:</label>
+                    <select name="reasons">
+                        <option value="Catering">Catering</option>
+                        <option value="Private Party">Private Party</option>
+                        <option value="Feedback">Feedback</option>
+                        <option value="Other">Other</option>
+                    </select>
+                </div>
+                <div class="form-group row">
+                    <label for="additional" class="col-sm-4 col-form-label">Additional Information:</label>
+                    <input type="textarea" class="col-sm-4 col-form-label" />
+                </div>
+                <label for="beenBefore">Have you been to the restaurant?</label>
+                <div class="form-check form-check-inline">
+                    
+                    <input class="form-check-input" type="radio" name="answer" id="option1" value="YES" checked>
+                    <label class="form-check-label" for="option1">No</label>
+                </div>
+                <div class="form-check form-check-inline">
+                    <input class="form-check-input" type="radio" name="answer" id="option2" value="NO">
+                    <label class="form-check-label" for="option2">Yes</label>
+                </div>
+                <br>
+
+                <label for="bestTime">Best days to contact you:</label>
+                <div class="form-check form-check-inline">
+
+                    <input class="form-check-input" type="checkbox" id="inlineCheckbox1" value="option1">
+                    <label class="form-check-label" for="inlineCheckbox1">M</label>
+                </div>
+                <div class="form-check form-check-inline">
+                    <input class="form-check-input" type="checkbox" id="inlineCheckbox2" value="option2">
+                    <label class="form-check-label" for="inlineCheckbox1">T</label>
+                </div>
+                <div class="form-check form-check-inline">
+                    <input class="form-check-input" type="checkbox" id="inlineCheckbox3" value="option3">
+                    <label class="form-check-label" for="inlineCheckbox1">W</label>
+                </div>
+                <div class="form-check form-check-inline">
+                    <input class="form-check-input" type="checkbox" id="inlineCheckbox4" value="option4">
+                    <label class="form-check-label" for="inlineCheckbox1">Th</label>
+                </div>
+                <div class="form-check form-check-inline">
+                    <input class="form-check-input" type="checkbox" id="inlineCheckbox5" value="option5">
+                    <label class="form-check-label" for="inlineCheckbox1">F</label>
+                </div>
+
+               
+                <br>
+                <br>
+                <input type="submit" value="Send Request" />
+
+
+            </form>
+  
+
+        <footer>
+            
+            <p>1234 Wetland Way, New London, NH 03257</p>
+            <p>1-345-654-1234</p>
+
+        </footer>
+        <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+    </body> 
+</html
